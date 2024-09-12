@@ -35,6 +35,8 @@ vim.keymap.set("n", "<F18>cs", "a\\begin{cases}\n\n\\end{cases}<ESC>")
 vim.keymap.set("n", "<F18>i", "a\\begin{itemize}\n\n\\end{itemize}<ESC>k")
 vim.keymap.set("n", "<F18>cd", "a\\begin{lstlisting}\n\n\\end{lstlisting}<ESC>k")
 vim.keymap.set("n", "<F18>v", "a\\begin{verbatim}\n\n\\end{verbatim}<ESC>k")
+vim.keymap.set("n", "<F18>p", "a\\begin{proofenv}\n\n\\end{proofenv}<ESC>k")
+vim.keymap.set("n", "<F18>cx", "a\\begin{exercise}\n\n\\end{exercise}<ESC>k")
 
 -- math bold
 vim.keymap.set("n", "<F18>mb", "a\\mathbb{}<ESC>h")
