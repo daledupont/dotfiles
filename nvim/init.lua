@@ -28,26 +28,26 @@ vim.keymap.set("n", "<F18>k", "a\\begin{corollary}[]\n\n\\end{corollary}<ESC>k")
 vim.keymap.set("n", "<F18>d", "a\\begin{definition}[]\n\n\\end{definition}<ESC>k")
 vim.keymap.set("n", "<F18>x", "a\\begin{example}[]\n\n\\end{example}<ESC>k")
 
-vim.keymap.set("n", "<F18>a", "a\\begin{aligned}\n\n\\end{aligned}<ESC>k")
+vim.keymap.set("n", "<F18>a", "a\\begin{align}\n\n\\end{align}<ESC>k")
 vim.keymap.set("n", "<F18>f", "a\\begin{framed}\n\n\\end{framed}<ESC>k")
 vim.keymap.set("n", "<F18>n", "a\\begin{enumerate}\n\n\\end{enumerate}<ESC>k")
 vim.keymap.set("n", "<F18>cs", "a\\begin{cases}\n\n\\end{cases}<ESC>")
-vim.keymap.set("n", "<F18>i", "a\\begin{itemize}\n\n\\end{itemize}<ESC>k")
+vim.keymap.set("n", "<F18>il", "a\\begin{itemize}\n\n\\end{itemize}<ESC>k")
 vim.keymap.set("n", "<F18>cd", "a\\begin{lstlisting}\n\n\\end{lstlisting}<ESC>k")
 vim.keymap.set("n", "<F18>v", "a\\begin{verbatim}\n\n\\end{verbatim}<ESC>k")
-vim.keymap.set("n", "<F18>p", "a\\begin{proofenv}\n\n\\end{proofenv}<ESC>k")
+vim.keymap.set("n", "<F18>pf", "a\\begin{proofenv}\n\n\\end{proofenv}<ESC>k")
 vim.keymap.set("n", "<F18>cx", "a\\begin{exercise}\n\n\\end{exercise}<ESC>k")
 
 -- math bold
-vim.keymap.set("n", "<F18>mb", "a\\mathbb{}<ESC>h")
-vim.keymap.set("n", "<F18>mc", "a\\mathcal{}<ESC>h")
-vim.keymap.set("n", "<F18>mf", "a\\mathfrak{}<ESC>h")
-
+vim.keymap.set("n", "<F18>mb", "i\\mathbb{<ESC>wa}<ESC>")
+vim.keymap.set("n", "<F18>mc", "i\\mathcal{<ESC>wa}<ESC>")
+vim.keymap.set("n", "<F18>mf", "i\\mathfrak{<ESC>wa}<ESC>")
 -- single line inserts
+
 vim.keymap.set("n", "<F18>qed", "a\\hfill $\\Box$<ESC>")
 vim.keymap.set("n", "<F18>hr", "a\\hrulefill<ESC>l")
 vim.keymap.set("n", "<F18>q", "a\\question<ESC>l")
-vim.keymap.set("n", "<F18>i", "a\\item  <ESC>")
+vim.keymap.set("n", "<F18>it", "I\\item <ESC>")
 
 -- tikz bindings
 vim.keymap.set("n", "<F18>tp", "a\\begin{tikzpicture}\n\\end{tikzpicture}<ESC>k")
@@ -57,9 +57,9 @@ vim.keymap.set("n", "<F18>tb", "a\\begin{tabular}{ccc}\n\\end{tabular}<ESC>k")
 
 vim.keymap.set("n", "<F18>lp", "i\\left<ESC>")
 vim.keymap.set("n", "<F18>rp", "i\\right<ESC>")
-vim.keymap.set("n", "<F18>sp", "f(i\\left<ESC>l%i\\right<ESC>")
-vim.keymap.set("n", "<F18>ss", "f[i\\left<ESC>l%i\\right<ESC>")
-vim.keymap.set("n", "<F18>sb", "f{i\\left<ESC>l%i\\right<ESC>")
+vim.keymap.set("n", "<F18>zp", "f(i\\left<ESC>l%i\\right<ESC>")
+vim.keymap.set("n", "<F18>zs", "f[i\\left<ESC>l%i\\right<ESC>")
+vim.keymap.set("n", "<F18>zb", "f{i\\left<ESC>l%i\\right<ESC>")
 
 -- matrix latex keybinds
 vim.keymap.set("n", "<F18>pm", "a\\begin{pmatrix}\n\n\\end{pmatrix}<ESC>k")
@@ -80,6 +80,10 @@ vim.keymap.set("n", "<F18>sp", "]s1z=w")
 vim.keymap.set("n", "<TAB>", "i$<ESC>")
 
 vim.o.conceallevel = 0
+
+vim.opt.paste = true
+
+vim.cmd("setlocal spell spelllang=en_us")
 
 -- vim.keymap.set("n", "<F18>br", "a\\begin{remark}<ESC>l")
 -- vim.keymap.set("n", "<F18>er", "a\\end{remark}<ESC>l")
