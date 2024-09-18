@@ -1,0 +1,15 @@
+
+XTerm.vt100.font: -xos4-terminus-medium-r-normal--32-320-72-72-c-160-iso10646-1
+
+// XTerm.vt100.font: -misc-jetbrains mono-medium-r-normal--32-0-0-0-m-0-ascii-0
+
+// green text
+XTerm.*.foreground: rgb:00/ff/ff
+// black background
+XTerm.*.background: rgb:11/11/11
+
+// use utf8
+XTerm.vt100.utf8: true
+// save the last 4096 lines
+XTerm.vt100.saveLines: 4096
+

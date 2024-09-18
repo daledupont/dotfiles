@@ -11,17 +11,17 @@ vim.cmd([[colorscheme nord]])
 -- vim.keymap.set("n", "<F18>es2", "a\\end{subsection}<ESC>l")
 -- vim.keymap.set("n", "<F18>bs1", "a\\begin{section}<ESC>l")
 -- vim.keymap.set("n", "<F18>es1", "a\\end{section}<ESC>l")
-vim.keymap.set("n", "<F18>s1", "a\\section{}<ESC>")
-vim.keymap.set("n", "<F18>s2", "a\\subsection{}<ESC>")
-vim.keymap.set("n", "<F18>s3", "a\\subsubsection{}<ESC>")
+vim.keymap.set("n", "<F18>es1", "a\\section{}<ESC>")
+vim.keymap.set("n", "<F18>es2", "a\\subsection{}<ESC>")
+vim.keymap.set("n", "<F18>es3", "a\\subsubsection{}<ESC>")
 
 vim.keymap.set("n", "<F18>toc", "a\\tableofcontents<ESC>l")
 vim.keymap.set("n", "<F18>np", "a\\newpage<ESC>l")
 
-vim.keymap.set("n", "<F18>e", "a\\begin{equation}\n\n\\end{equation}<ESC>k")
+vim.keymap.set("n", "<F18>eq", "a\\begin{equation}\n\n\\end{equation}<ESC>k")
 vim.keymap.set("n", "<F18>cm", "a\\begin{comment}\n\n\\end{comment}<ESC>k")
 
-vim.keymap.set("n", "<F18>r", "a\\begin{remark}[]\n\n\\end{remark}<ESC>k")
+vim.keymap.set("n", "<F18>er", "a\\begin{remark}[]\n\n\\end{remark}<ESC>k")
 vim.keymap.set("n", "<F18>th", "a\\begin{theorem}[]\n\n\\end{theorem}<ESC>k")
 vim.keymap.set("n", "<F18>l", "a\\begin{lemma}[]\n\n\\end{lemma}<ESC>k")
 vim.keymap.set("n", "<F18>k", "a\\begin{corollary}[]\n\n\\end{corollary}<ESC>k")
@@ -49,6 +49,28 @@ vim.keymap.set("n", "<F18>hr", "a\\hrulefill<ESC>l")
 vim.keymap.set("n", "<F18>q", "a\\question<ESC>l")
 vim.keymap.set("n", "<F18>it", "I\\item <ESC>")
 
+vim.keymap.set("n", "<F18>bor", "a\\mathbb{B}_{\\mathbb{R}^n}<ESC>")
+vim.keymap.set("n", "<F18>eps", "a\\epsilon<ESC>")
+vim.keymap.set("n", "<F18>la", "a\\lambda<ESC>")
+vim.keymap.set("n", "<F18>olm", "a\\lambda^*_n<ESC>")
+vim.keymap.set("n", "<F18>ols", "a\\mathcal{M}_{\\lambda^*_n}<ESC>")
+vim.keymap.set("n", "<F18>sa", "a$\\sigma$-algebra<ESC>")
+
+vim.keymap.set("n", "<F18>seq", "a\\{E_n\\}_{n=1}^{\\infty}<ESC>")
+
+vim.keymap.set("n", "<F18>rn", "a\\mathbb{R}^n<ESC>")
+vim.keymap.set("n", "<F18>nn", "a\\mathbb{N}<ESC>")
+vim.keymap.set("n", "<F18>cn", "a\\mathbb{C}^n<ESC>")
+
+vim.keymap.set("n", "<F18>ot", "a\\otimes<ESC>")
+vim.keymap.set("n", "<F18>od", "a\\odot<ESC>")
+vim.keymap.set("n", "<F18>eset", "a\\emptyset<ESC>")
+vim.keymap.set("n", "<F18>dt", "a\\cdot<ESC>")
+vim.keymap.set("n", "<F18>ti", "a\\times<ESC>")
+vim.keymap.set("n", "<F18>bcup", "a\\bigcup^{\\infty}_{n=1} E_n<ESC>")
+vim.keymap.set("n", "<F18>bcap", "a\\bigcup^{\\infty}_{n=1} E_n<ESC>")
+vim.keymap.set("n", "<F18>sum", "a\\sum^{\\infty}_{n=1} E_n<ESC>")
+vim.keymap.set("n", "<F18>prod", "a\\prod^{\\infty}_{n=1} E_n<ESC>")
 -- tikz bindings
 vim.keymap.set("n", "<F18>tp", "a\\begin{tikzpicture}\n\\end{tikzpicture}<ESC>k")
 vim.keymap.set("n", "<F18>tn", "a\\node at (0,0) {};<ESC>")
@@ -77,7 +99,10 @@ vim.keymap.set("n", "<F18>sp", "]s1z=w")
 -- dollar sign hotkey
 -- consider binding to `
 -- vim.keymap.set("n", "<F2>", "i$<ESC>")
-vim.keymap.set("n", "<TAB>", "i$<ESC>")
+-- vim.keymap.set("n", "<TAB>", "i$<ESC>")
+vim.keymap.set("n", "<TAB>q", "i$<ESC>")
+vim.keymap.set("n", "<F18><TAB>", "i$<ESC>")
+vim.keymap.set("n", "<TAB><F18>", "i$<ESC>")
 
 vim.o.conceallevel = 0
 
